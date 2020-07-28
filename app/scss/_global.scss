@@ -11,8 +11,7 @@ html {
 html,
 body {
   height: 100%;
-  position: relative;
-  // overflow-x: hidden;
+  position: relative; 
 }
 
 p {
@@ -31,8 +30,7 @@ h6 {
 a {
   display: inline-block;
   text-decoration: none;
-  cursor: pointer;
-  // color: $text;
+  cursor: pointer; 
 }
 
 ul,
@@ -44,7 +42,7 @@ li {
 
 body {
   font-family: $ff;
-  font-weight: $fw;
+  font-weight: 400;
   font-size: $fz;
   line-height: $lh;
   color: $red;
@@ -62,36 +60,19 @@ body {
 
 .footer {
   flex: 0 0 auto;
-}
-
-// .container-menu{
-// max-width: 1366px;
-// margin: 0 auto;
-// }
+} 
 .container {
-  max-width: 1110px;
-  // width: 100%;
-  margin: 0 auto;
-  // padding: 0 47px;
+  max-width: 1110px; 
+  margin: 0 auto; 
 }
-
-//   .contant {
-//     padding: 120px 0 120px;
-//   }
-
-//   button{
-//     @include border();
-//   }
+ 
 .title {
-  font-family: Cyrvetica v2 Extra Outline;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 42px;
-  /* identical to box height */
+  font-family: $ff-1;  
+  font-size: 75px;
+  line-height: 82px; 
 
   text-transform: uppercase;
 
-  color: #E51A4B;
+  color: #000;
 }
  

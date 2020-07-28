@@ -1,0 +1,50 @@
+
+// Assistant Regular
+@font-face {
+    font-family: 'Assistant';
+    src: url('../fonts/Assistant/Assistant Regular.eot');
+    src: url('../fonts/Assistant/Assistant Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Assistant/Assistant Regular.woff') format('woff'),
+        url('../fonts/Assistant/Assistant Regular.ttf') format('truetype'),
+        url('../fonts/Assistant/Assistant Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal; 
+}
+// Assistant Bold
+@font-face {
+    font-family: 'Assistant';
+    src: url('../fonts/Assistant/Assistant Bold.eot');
+    src: url('../fonts/Assistant/Assistant Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Assistant/Assistant Bold.woff') format('woff'),
+        url('../fonts/Assistant/Assistant Bold.ttf') format('truetype'),
+        url('../fonts/Assistant/Assistant Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal; 
+}
+// Assistant SemiBold
+@font-face {
+    font-family: 'Assistant SemiBold';
+    src: url('../fonts/Assistant/Assistant SemiBold.eot');
+    src: url('../fonts/Assistant/Assistant SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Assistant/Assistant SemiBold.woff') format('woff'),
+        url('../fonts/Assistant/Assistant SemiBold.ttf') format('truetype'),
+        url('../fonts/Assistant/Assistant SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal; 
+}
+
+// Impact Regular
+@font-face {
+    font-family:'Impact';
+    src: url('../fonts/Impact/Impact.eot');
+	src: url('../fonts/Impact/Impact.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Impact/Impact.woff') format('woff'),
+		url('../fonts/Impact/Impact.ttf') format('truetype'),
+		url('../fonts/Impact/Impact.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: condensed; 
+}

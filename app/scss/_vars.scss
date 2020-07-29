@@ -1,6 +1,4 @@
-//colors
-$white: #f2f2f2;
-$red:#E51A4B;
+//colors 
 $green:#24ad4a;
 $grey:#dadada;
 $darkDrown:#413f34;
@@ -8,10 +6,27 @@ $darkDrown:#413f34;
 $bgc:#32a94a;
 
 //body-start
-$ff: "Assistant",
-sans-serif; //regular  
-$ff-1: "Impact",
-sans-serif; //second 
+$ff: "Assistant"; //regular  
+$ff-1: "Impact"; //second 
+$ff-2: "Assistant SemiBold"; //second 
 $fz:22px;
 $lh:35px;
-//body-end 
+
+//body-end   
+@mixin f700 {
+    font-family: $ff;
+    font-weight: 700;
+}
+
+@mixin button() {   
+    display: block;  
+    cursor: pointer; 
+    padding: 0;
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+    border-image: none;
+}
+
+//@include f700;
+//@include borderBlack;

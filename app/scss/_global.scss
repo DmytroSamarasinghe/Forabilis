@@ -11,7 +11,8 @@ html {
 html,
 body {
   height: 100%;
-  position: relative; 
+  position: relative;
+  // overflow-x: hidden;
 }
 
 p {
@@ -25,12 +26,14 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-weight: normal;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
-  cursor: pointer; 
+  cursor: pointer;
+  color: #000;
 }
 
 ul,
@@ -45,7 +48,7 @@ body {
   font-weight: 400;
   font-size: $fz;
   line-height: $lh;
-  color: $red;
+  color: #ffffff;
 }
 
 .wrapper {
@@ -60,19 +63,116 @@ body {
 
 .footer {
   flex: 0 0 auto;
-} 
-.container {
-  max-width: 1110px; 
-  margin: 0 auto; 
 }
- 
+
+.container {
+  min-width: 340px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 47px;
+}
+
 .title {
-  font-family: $ff-1;  
+  font-family: $ff-1;
   font-size: 75px;
-  line-height: 82px; 
+  line-height: 82px;
+  letter-spacing: 3px;
 
   text-transform: uppercase;
 
   color: #000;
+  position: relative;
+  padding-bottom: 45px;
+  margin-bottom: 45px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 117px;
+    background-color: #000;
+    bottom: 0;
+  }
+
+  &.line-green::before {
+    background-color: $bgc;
+  }
+
+  &.white-title {
+    color: #fff;
+  }
+
 }
- 
+
+.box-white {
+  width: 275px;
+  height: 252px;
+  background-color: #fff;
+}
+
+
+.button-green {
+  @include button();
+  @include f700;
+  background-color: $bgc;
+  color: #ffffff;
+  line-height: 48px;
+  padding: 0 17px;
+}
+
+.content-box {
+  padding: 180px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.button-box {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover{
+    background-color: $bgc;  
+  }
+}
+
+.button-slider {
+  background-color: $grey;
+  top: 50%;
+  transform: translate(0%, -50%);
+  position: absolute;
+  @include button();
+
+  &::after {
+    width: 22px;
+    height: 35px;
+  }
+  &:focus{ 
+    outline:none;
+  }
+  &.clients__slider-button-left {
+    left:  -130px;
+
+    &::after {
+      background-image: url(../images/icon/arrow/arrow-left.png);
+    }
+  }
+
+  &.clients__slider-button-right { 
+    right:  -130px;
+
+    &::after {
+      background-image: url(../images/icon/arrow/arrow-right.png);
+    }
+  }
+}

@@ -21,6 +21,8 @@ gulp.task('sass', function () {
 gulp.task('style', function(){
     return gulp.src([
         'node_modules/normalize.css/normalize.css', 
+        'node_modules/slick-carousel/slick/slick.css',
+        // 'node_modules/swiper/swiper-bundle.css', 
         // 'node_modules/swiper/css/swiper.css',  
         // 'node_modules/wowjs/css/libs/animate.css', 
     ])
@@ -31,6 +33,8 @@ gulp.task('style', function(){
 
 gulp.task('script', function(){
     return gulp.src([
+        'node_modules/slick-carousel/slick/slick.min.js',
+        // 'node_modules/swiper/swiper-bundle.js',
         //'node_modules/vue/dist/vue.js',   
         // 'node_modules/swiper/js/swiper.js', 
         // 'node_modules/wowjs/dist/wow.min.js',  
@@ -66,4 +70,4 @@ gulp.task('watch', function () {
     gulp.watch('app/js/*.js', gulp.parallel('js'));
 });
 
-gulp.task('default', gulp.parallel('style',  'sass', 'watch', 'browser-sync'))   //'script',
+gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync'))   //'script',

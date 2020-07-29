@@ -8,7 +8,7 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: $bgc;
+    background-color: $green;
     z-index: 2;
 }
 
@@ -48,7 +48,7 @@
 // greeting
 .greeting {
     margin-top: 123.420px;
-    background-color: $bgc;
+    background-color: $green;
     overflow-x: hidden;
 }
 
@@ -104,39 +104,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-}
-
-.expertise__item {
-    position: relative;
-    cursor: pointer;
-
-    &-text {
-        color: #000000;
-        font-size: 32px;
-        line-height: 40px;
-        font-family: $ff-2;
-        margin: 2em auto;
-        min-height: 4em;
-        padding-left: 20px;
-        padding-right: 65px;
-    }
-
-    &:hover>.expertise__shadow-info {
-        min-height: 252px;
-        background: $green;
-        height: 100%;
-    }
-}
-
-.expertise__shadow-info {
-    overflow: hidden;
-    height: 0;
-    top: 0;
-    background: transparent;
-    position: absolute;
-    transition: all, 0.5s;
-    min-height: 0;
-    padding: 6px 18px;
 }
 
 .expertise__shadow-text {
@@ -237,7 +204,7 @@
     font-family: $ff-2;
 
     span {
-        color: $bgc;
+        color: $green;
     }
 }
 
@@ -309,6 +276,212 @@
         width: 36px;
         height: 21px;
     }
+}
+
+//about
+.about {
+    background-color: $green;
+    overflow-x: hidden;
+}
+
+.about__conteiner {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/about/Qweshion.png);
+        width: 705px;
+        height: 1011px;
+        bottom: 0;
+        right: -400px;
+    }
+
+}
+
+.about__info {
+    max-width: 890px;
+}
+
+.about__info-text {
+    &+.about__info-text {
+        font-family: $ff-2;
+        font-size: 32px;
+        line-height: 40px;
+        color: #000;
+    }
+}
+
+.about__values-title {
+    font-size: 34px;
+    line-height: 82px;
+    padding: 0;
+    margin: 0;
+
+    &::before {
+        content: none;
+    }
+}
+
+.about__values-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__values-item {
+    position: relative;
+}
+
+.about__values-shadow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//contact
+.contact {
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+} 
+
+.contact__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 890px;
+}
+
+.contact__info-form {
+    max-width: 585px;
+}
+
+.contact__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 378px;
+    margin-bottom: 35px;
+
+    &-box {
+        position: relative;
+        width: 100%;
+
+        &:hover>.contact__form-lable {
+            overflow: hidden;
+            height: 0;
+        }
+    }
+
+    &-lable {
+        position: absolute;
+        left: 20px;
+        top: 8px;
+        color: #413e34;
+
+        span {
+            font-family: $ff-2;
+            color: $green;
+        }
+    }
+
+    &-input {
+        background-color: #fff;
+        width: 100%;
+        min-height: 48px;
+        line-height: 48px;
+        padding: 0 20px;
+        @include input();
+        // margin: 17px 0;
+    }
+}
+
+input[type="message"] {
+    min-height: 132px;
+} 
+
+.contact__info-box {
+    margin-left: auto;
+    max-width: 250px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../images/contact/h-line.png);
+        width: 259px;
+        height: 4px;
+        bottom: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/contact/phone.jpg);
+        width: 699px;
+        height: 618px;
+        right: -699px;
+
+    }
+}
+
+.contact__info-address {
+    font-family: $ff-2;
+    color: #413e34;
+    margin-bottom: 30px;
+}
+
+.contact__info-social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 177px;
+
+    &-link {
+        a {
+            background-repeat: no-repeat;
+            width: 48px;
+            height: 48px;
+        }
+
+        & .link-facebook {
+            background-image: url(../images/icon/facebook.jpg);
+        }
+
+        & .link-linke {
+            background-image: url(../images/icon/Linkedin.jpg);
+        }
+
+        & .link-telegram {
+            background-color: #413e34;
+            border-radius: 15%;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: url(../images/icon/white/plane.png);
+                background-repeat: no-repeat;
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+
+//footer 
+.footer {
+    background-color: #f2f2f2;
+}
+
+.footer__contant {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.footer__copyright {
+    font-size: 17px;
+    color: #413e34;
 }
 
 @import "media";

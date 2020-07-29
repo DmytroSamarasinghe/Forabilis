@@ -72,7 +72,7 @@ body {
   margin: 0 auto;
   padding: 0 47px;
 }
-
+//title, white-title, line-black, line-green
 .title {
   font-family: $ff-1;
   font-size: 75px;
@@ -85,7 +85,8 @@ body {
   position: relative;
   padding-bottom: 45px;
   margin-bottom: 45px;
-
+  max-width: 650px;
+  width: 100%;
   &::before {
     content: '';
     position: absolute;
@@ -96,38 +97,34 @@ body {
   }
 
   &.line-green::before {
-    background-color: $bgc;
+    background-color: $green;
   }
 
   &.white-title {
     color: #fff;
   }
-
-}
-
-.box-white {
-  width: 275px;
-  height: 252px;
-  background-color: #fff;
 }
 
 
-.button-green {
+//button, button-green
+.button {
   @include button();
   @include f700;
-  background-color: $bgc;
   color: #ffffff;
   line-height: 48px;
   padding: 0 17px;
+  &-green{
+    background-color: $green; 
+  }
 }
-
+//content-box
 .content-box {
   padding: 180px 0;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
-
+// Button-box
 .button-box {
   width: 130px;
   height: 130px;
@@ -141,11 +138,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  &:hover{
-    background-color: $bgc;  
+
+  &:hover {
+    background-color: $green;
   }
 }
-
+// Button-slider
 .button-slider {
   background-color: $grey;
   top: 50%;
@@ -157,22 +155,70 @@ body {
     width: 22px;
     height: 35px;
   }
-  &:focus{ 
-    outline:none;
+
+  &:focus {
+    outline: none;
   }
+
   &.clients__slider-button-left {
-    left:  -130px;
+    left: -130px;
 
     &::after {
       background-image: url(../images/icon/arrow/arrow-left.png);
     }
   }
 
-  &.clients__slider-button-right { 
-    right:  -130px;
+  &.clients__slider-button-right {
+    right: -130px;
 
     &::after {
       background-image: url(../images/icon/arrow/arrow-right.png);
     }
   }
 }
+ 
+ // Box, Box-shadow
+.box {
+  //>box-text
+  display: flex;
+  min-height: 252px; 
+  //box
+  width: 275px;
+  height: 252px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover>.shadow-box {
+    min-height: 252px; 
+
+    &.shadow-box-green {
+      background: $bgc;
+    }
+    &.shadow-box-black {
+      background: #000;
+    }
+  }
+  &-white{
+    background-color: #fff;
+  }
+}
+.box-text{
+  font-family: $ff-2;
+  font-size: 32px;
+  line-height: 40px;
+  color: #000;
+  text-transform: uppercase;
+  margin: auto 0;
+  padding: 0 19px; 
+}
+.shadow-box {
+  overflow: hidden;
+  height: 0;
+  top: 0;
+  background: transparent;
+  position: absolute;
+  transition: all, 0.5s;
+  min-height: 0; 
+  padding: 6px 18px;
+}
+ 

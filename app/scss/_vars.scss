@@ -1,9 +1,9 @@
 //colors 
-$green:#24ad4a;
+$green:#32a94a;
 $grey:#dadada;
 $darkDrown:#413f34;
 //backgrond fon
-$bgc:#32a94a;
+$bgc:#24ad4a;
 
 //body-start
 $ff: "Assistant"; //regular  
@@ -28,5 +28,9 @@ $lh:35px;
     border-image: none;
 }
 
-//@include f700;
-//@include borderBlack;
+@mixin input() {
+    border: none;
+} 
+//@include f700; 
+//@include button();
+//@include input() ;

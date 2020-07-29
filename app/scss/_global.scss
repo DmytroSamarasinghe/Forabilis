@@ -76,15 +76,14 @@ body {
 .title {
   font-family: $ff-1;
   font-size: 75px;
-  line-height: 82px;
-  letter-spacing: 3px;
+  line-height: 82px; 
 
   text-transform: uppercase;
 
   color: #000;
   position: relative;
-  padding-bottom: 45px;
-  margin-bottom: 45px;
+  padding-bottom: 40px;
+  margin-bottom: 39px;
   max-width: 650px;
   width: 100%;
   &::before {
@@ -94,6 +93,7 @@ body {
     width: 117px;
     background-color: #000;
     bottom: 0;
+    left: 0;
   }
 
   &.line-green::before {
@@ -112,15 +112,15 @@ body {
   @include f700;
   color: #ffffff;
   line-height: 48px;
-  padding: 0 17px;
+  padding: 0 18px;
   &-green{
     background-color: $green; 
   }
 }
 //content-box
 .content-box {
-  padding: 180px 0;
-  max-width: 1200px;
+  padding: 192px 0 180px;
+  max-width: 1203px;
   margin: 0 auto;
   width: 100%;
 }
@@ -146,7 +146,7 @@ body {
 // Button-slider
 .button-slider {
   background-color: $grey;
-  top: 50%;
+  top: 46%;
   transform: translate(0%, -50%);
   position: absolute;
   @include button();

@@ -9,12 +9,15 @@
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <style>
-    /* .header,    .greeting,    .expertise,  .clients, */
-    /* .about, */
-    /* .contact, */
-    /* .footer {
-      display: none;
-    } */
+    /* .header,      */
+    .greeting,
+    .expertise,
+    .clients,
+    .about,
+    .contact,
+    .footer {
+      /* display: none; */
+    }
   </style>
 </head>
 
@@ -51,7 +54,7 @@
               </h1>
               <p class="greeting__text">
                 Supporting every step of
-                your startup journey
+                your startup journey <br>
                 to scale in the global market
               </p>
             </div>
@@ -143,8 +146,8 @@
                     </div>
                     <p class="clients__item-text">
                       “In the past few months, our product and offering have been redefined by
-                      our work with Forabilis.
-                      We feel confident that this new go-to-market direction can help us leap forward”.
+                      our work with Forabilis. We feel confident that this new go-to-market direction can help us leap
+                      forward”.
                     </p>
                     <div class="clients__item-autor">Yossi Mizrahi</div>
                     <div class="clients__item-company">
@@ -174,39 +177,8 @@
                     </div>
                     <p class="clients__item-text">
                       “In the past few months, our product and offering have been redefined by
-                      our work with Forabilis.
-                      We feel confident that this new go-to-market direction can help us leap forward”.
-                    </p>
-                    <div class="clients__item-autor">Yossi Mizrahi</div>
-                    <div class="clients__item-company">
-                      Founder .
-                      <span>Grymco</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="clients__slider-inner">
-                  <div class="clients__slider-item">
-                    <div class="clients__item-img" style="background-image: url(images/clients/slider/item_1.jpg);">
-                    </div>
-                    <p class="clients__item-text">
-                      “The Forabilis team is working with us on the positioning of
-                      a new product offering for our target audience.
-                      Their talents and unique process have significantly
-                      contributed to the success of the product”.
-                    </p>
-                    <div class="clients__item-autor">Mati Cohen</div>
-                    <div class="clients__item-company">
-                      CTO .
-                      <span>Panaya</span>
-                    </div>
-                  </div>
-                  <div class="clients__slider-item">
-                    <div class="clients__item-img" style="background-image: url(images/clients/slider/item_2.jpg);">
-                    </div>
-                    <p class="clients__item-text">
-                      “In the past few months, our product and offering have been redefined by
-                      our work with Forabilis.
-                      We feel confident that this new go-to-market direction can help us leap forward”.
+                      our work with Forabilis. We feel confident that this new go-to-market direction can help us leap
+                      forward”.
                     </p>
                     <div class="clients__item-autor">Yossi Mizrahi</div>
                     <div class="clients__item-company">
@@ -337,26 +309,30 @@
       <section class="contact">
         <div class="container">
           <div class="contact__contant content-box">
-            <h1 class="contact__title title line-green">READY TO HEAR SOME MORE?</h1>
+            <h1 class="contact__title title line-green">READY TO HEAR <br> SOME MORE?</h1>
             <div class="contact__info">
               <div class="contact__info-form">
-                <form action="" class="contact__form">
+                <form action="#0" method="post" class="contact__form">
+
                   <div class="contact__form-box">
-                    <label class="contact__form-lable">Name <span>*</span></label>
-                    <input class="contact__form-input" type="text" name="name">
+                    <input class="contact__form-input input-line" type="text" id="first_name" name="first_name" required
+                      placeholder=" " />
+                    <label class="contact__form-lable" for="first_name">Name <span>*</span> </label>
                   </div>
                   <div class="contact__form-box">
-                    <label class="contact__form-lable">Email <span>*</span></label>
-                    <input class="contact__form-input" type="email" name="email">
+                    <input class="contact__form-input input-line" type="email" id="email" name="email" required
+                      placeholder=" " />
+                    <label class="contact__form-lable" for="email">Email <span>*</span></label>
                   </div>
                   <div class="contact__form-box">
-                    <label class="contact__form-lable">Phone</label>
-                    <input class="contact__form-input" type="tel" name="tel">
+                    <input class="contact__form-input input-line" type="tel" id="tel" name="tel" required
+                      placeholder=" " />
+                    <label class="contact__form-lable" for="tel">Phone</label>
                   </div>
                   <div class="contact__form-box">
-                    <label class="contact__form-lable">Message</label>
-                    <input class="contact__form-input" type="message" name="message">
-                  </div> 
+                    <textarea class="contact__form-textarea input-line" name="message" id="message"
+                      placeholder="Message"></textarea>
+                  </div>
                 </form>
                 <button class="contact__info-button button button-green">
                   CONTACT US
@@ -365,7 +341,7 @@
               <div class="contact__info-box">
                 <p class="contact__info-address">
                   WeWork Sarona <br>
-                  3 Aluf Kalman Magen st.
+                  3 Aluf Kalman Magen st.<br>
                   Tel Aviv 67897 <br>
                   Israel
                 </p>
@@ -391,7 +367,6 @@
       </div>
     </footer>
   </div>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>

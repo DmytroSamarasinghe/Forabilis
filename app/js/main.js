@@ -1,7 +1,7 @@
-$(function ()  {
+$(function () {
 
     $(".clients__slider-wrapper").slick({
-        dots: false, 
+        dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         appendArrows: $('.clients__slider-button'),
@@ -33,5 +33,4 @@ $(function ()  {
         //     },
         // ]
     });
-});
- 
+}); 

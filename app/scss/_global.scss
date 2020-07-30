@@ -67,8 +67,7 @@ body {
   flex: 0 0 auto;
 }
 
-.container {
-  min-width: 320px;
+.container { 
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
@@ -191,7 +190,7 @@ body {
   cursor: pointer;
 
   &:hover>.shadow-box {
-    min-height: 252px; 
+    min-height: 100%; 
 
     &.shadow-box-green {
       background: $bgc;

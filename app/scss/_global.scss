@@ -42,7 +42,9 @@ li {
   padding: 0;
   list-style: none;
 }
-
+img{
+  display: block;
+}
 body {
   font-family: $ff;
   font-weight: 400;
@@ -66,7 +68,7 @@ body {
 }
 
 .container {
-  min-width: 340px;
+  min-width: 320px;
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
@@ -221,4 +223,9 @@ body {
   min-height: 0; 
   padding: 6px 18px;
 }
- 
+ //mobil
+  
+.menu__btn,
+.header__btn-menu {
+  display: none;
+}

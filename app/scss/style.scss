@@ -54,7 +54,7 @@
 .greeting {
     margin-top: 123.420px;
     background-color: $green;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .greeting__contant {
@@ -73,12 +73,25 @@
 
 .greeting__bgc-img {
     position: absolute;
-    width: 2539px;
+    width: 2585px;
     height: 1077px;
-    background-image: url(../images/greeting/bg.jpg);
+    // background-image: url(../images/greeting/bg.jpg);
+    background-image: url(../images/greeting/get-big.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     top: -120.42px;
+    left: -41px;  
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../images/greeting/bottom-arrow.png);
+        background-repeat: no-repeat;
+        width: 421px;
+        height: 153px;
+        left: 235px;
+        bottom: -5px;
+    }
 }
 
 
@@ -364,9 +377,11 @@
     background-color: #f2f2f2;
     overflow: hidden;
 }
-.contact__contant.content-box{
+
+.contact__contant.content-box {
     padding-bottom: 106px;
 }
+
 .contact__info {
     display: flex;
     justify-content: space-between;

@@ -24,6 +24,43 @@
 <body>
   <div class="wrapper">
     <div class="content">
+      <div class="fixed_menu">
+        <div class="fixed_menu-container">
+          <div class="fixed_menu-contant">
+            <div class="fixed_menu-box">
+              <div class="fixed_menu-nav animate-href slideDown">
+                <a href="#Expertise">
+                  <div class="fixed_menu-button fixed_menu-expertise fixed_menu-star fixed_menu-on">
+                    <div class="fixed_menu-text">expertise</div>
+                  </div>
+                </a>
+                <a href="#Clients">
+                  <div class="fixed_menu-button fixed_menu-clients fixed_menu-briefcase">
+                    <div class="fixed_menu-text">clients</div>
+                  </div>
+                </a>
+                <a href="#About">
+                  <div class="fixed_menu-button fixed_menu-about fixed_menu-people">
+                    <div class="fixed_menu-text"> about</div>
+                  </div>
+                </a>
+                <a href="javascript:void(0)">
+                  <div class="fixed_menu-button fixed_menu-message">
+                    <div class="fixed_menu-text"></div>
+                  </div>
+                </a>
+                <a href="#Contact">
+                  <div class="fixed_menu-button fixed_menu-contact fixed_menu-plane">
+                    <div class="fixed_menu-text">contact us</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
       <header class="header">
         <div class="container">
           <div class="header-contant">
@@ -36,12 +73,12 @@
                 <div></div>
                 <div></div>
               </div>
-              <ul class="header__menu-inner menu__list">
-                <li class="header__menu-item"><a href="#">EXPERTISE</a></li>
-                <li class="header__menu-item"><a href="#">CLIENTS</a></li>
-                <li class="header__menu-item"><a href="#">ABOUT</a></li>
-                <li class="header__menu-item"><a href="#">BLOG</a></li>
-                <li class="header__menu-item"><a href="#">CONTACT US</a></li>
+              <ul class="header__menu-inner menu__list animate-href">
+                <li class="header__menu-item"><a href="#Expertise">EXPERTISE</a></li>
+                <li class="header__menu-item"><a href="#Clients">CLIENTS</a></li>
+                <li class="header__menu-item"><a href="#About">ABOUT</a></li>
+                <li class="header__menu-item"><a href="javascript:void(0)">BLOG</a></li>
+                <li class="header__menu-item"><a href="#Contact">CONTACT US</a></li>
               </ul>
             </div>
           </div>
@@ -66,7 +103,7 @@
           </div>
         </div>
       </section>
-      <section class="expertise">
+      <section id="Expertise" class="expertise">
         <div class="container">
           <div class="expertise__contant content-box">
             <div class="expertise__title-box">
@@ -127,7 +164,7 @@
           </div>
         </div>
       </section>
-      <section class="clients">
+      <section id="Clients" class="clients">
         <div class="container">
           <div class="clients__content content-box">
             <h1 class="clients__title title line-green">TAKE IT FROM THEM</h1>
@@ -266,7 +303,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section id="About" class="about">
         <div class="container">
           <div class="about__conteiner content-box">
             <h1 class="about__title title white-title">WHO WE ARE</h1>
@@ -324,7 +361,7 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section id="Contact" class="contact">
         <div class="container">
           <div class="contact__contant content-box">
             <h1 class="contact__title title line-green">READY TO HEAR <br> SOME MORE?</h1>
@@ -355,7 +392,7 @@
                 <div class="contact__info-button">
                   <button class=" button button-green">
                     CONTACT US
-                  </button> 
+                  </button>
                   <div class="contact__info-copyright">© forabilis 2019</div>
                 </div>
 

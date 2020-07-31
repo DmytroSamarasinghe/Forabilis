@@ -54,40 +54,31 @@ pigination('.clients', '.fixed_menu-clients');
 pigination('.about', '.fixed_menu-about');
 pigination('.contact', '.fixed_menu-contact');
 
-window.addEventListener('scroll', function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop,
-        greeting = $('.greeting').height(),
-        height = $('.header').height(),
-        fixedMenu = $('.fixed_menu'),
-        actualClientWidth = document.body.clientWidth,
-        actualInnerWidth = window.innerWidth,
-        scrolCss;
-    if (scrollTop > (greeting + height - 200)) {
-        $(fixedMenu).addClass('fixed_menu-active');
+ 
+function windowSize() { 
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+            greeting = $('.greeting').height(),
+            height = $('.header').height(),
+            fixedMenu = $('.fixed_menu'),
+            actualClientWidth = document.body.clientWidth,
+            actualInnerWidth = window.innerWidth,
+            scrolCss;
+        if (actualInnerWidth > 1200) {
+            if (scrollTop > (greeting + height - 200)) {
+                $(fixedMenu).addClass('fixed_menu-active');
 
-    } else {
-        $(fixedMenu).removeClass('fixed_menu-active');
-    }
-    scrolCss = actualInnerWidth - actualClientWidth + 96;
-    $(fixedMenu).css("width", `calc(100vw - ${scrolCss}px)`);
-
-
-}); 
-
-function windowSize() {
-    let actualInnerWidth = window.innerWidth,
-        fixedMenu = $('.fixed_menu');
-    console.log(actualInnerWidth);
-    if (actualInnerWidth > 1200) {
-        $(fixedMenu).css("display", "block");
-    } else {
-        $(fixedMenu).css("display", "none");
-    }
+            } else {
+                $(fixedMenu).removeClass('fixed_menu-active');
+            }
+        } else {
+            $(fixedMenu).removeClass('fixed_menu-active');
+        }
+        scrolCss = actualInnerWidth - actualClientWidth + 96;
+        $(fixedMenu).css("width", `calc(100vw - ${scrolCss}px)`); 
 }
-$(window).on('load resize', windowSize);
+$(window).on('load resize scroll', windowSize);
 
-function animateHref(el) {
-
+function animateHref(el) { 
     $(el).on('click', '[href*="#"]', function (e) {
         $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1500);
         e.preventDefault();
